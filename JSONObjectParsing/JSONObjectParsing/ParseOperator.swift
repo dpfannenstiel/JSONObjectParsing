@@ -43,30 +43,72 @@ func parse<T>(lhs:JSON, rhs:String) throws -> T {
 	return result
 }
 
-public func <== <T>(lhs:JSON, rhs:String) throws -> T {
+func optionalParse<T>(lhs:JSON, rhs:String) throws -> T? {
+    
+    do {
+        
+        let result:T = try parse(lhs: lhs, rhs: rhs)
+        return result
+        
+    } catch JSONParsingError.KeyNotFound(keyName: _) {
+        return nil
+    } catch JSONParsingError.TypeMismatch(expectedType: _, actualType: "NSNull") {
+        return nil
+    } catch {
+        throw error
+    }
+
+}
+
+// MARK: - String
+public func <== (lhs:JSON, rhs: String) throws -> String {
 	
-	do {
-		let result:T = try parse(lhs: lhs, rhs: rhs)
-		return result
-	} catch {
-		throw error
-	}
+    return try parse(lhs: lhs, rhs: rhs)
+
 }
 
 public func <== (lhs:JSON, rhs:String) throws -> String? {
 	
-	do {
-		
-		let result:String = try lhs <== rhs
-		return result
-		
-	} catch JSONParsingError.KeyNotFound(keyName: _) {
-		return nil
-	} catch JSONParsingError.TypeMismatch(expectedType: _, actualType: "NSNull") {
-		return nil
-	} catch {
-		throw error
-	}
-	
+    return try optionalParse(lhs: lhs, rhs: rhs)
+
+}
+
+// MARK: - Int
+public func <== (lhs:JSON, rhs: String) throws -> Int {
+    
+    return try parse(lhs: lhs, rhs: rhs)
+    
+}
+
+public func <== (lhs:JSON, rhs:String) throws -> Int? {
+    
+    return try optionalParse(lhs: lhs, rhs: rhs)
+    
+}
+
+// MARK: - Double
+public func <== (lhs:JSON, rhs: String) throws -> Double {
+    
+    return try parse(lhs: lhs, rhs: rhs)
+    
+}
+
+public func <== (lhs:JSON, rhs:String) throws -> Double? {
+    
+    return try optionalParse(lhs: lhs, rhs: rhs)
+    
+}
+
+// MARK: - Float
+public func <== (lhs:JSON, rhs: String) throws -> Float {
+    
+    return try parse(lhs: lhs, rhs: rhs)
+    
+}
+
+public func <== (lhs:JSON, rhs:String) throws -> Float? {
+    
+    return try optionalParse(lhs: lhs, rhs: rhs)
+    
 }
 
