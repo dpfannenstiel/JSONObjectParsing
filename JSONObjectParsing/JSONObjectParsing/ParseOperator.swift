@@ -12,7 +12,7 @@ import Foundation
 /// operators.
 public typealias JSON = [String:Any]
 
-public enum JSONParsingError: ErrorProtocol {
+public enum JSONParsingError: Error {
 	/// The requested key was not available in the JSON object.
 	case KeyNotFound(keyName:String)
 	
