@@ -6,8 +6,6 @@
 //  Copyright © 2016 Dustin Pfannenstiel. All rights reserved.
 //
 
-import Foundation
-
 /// A convienience declaration for Dictionaries that are supported by the parse
 /// operators.
 public typealias JSON = [String:Any]
