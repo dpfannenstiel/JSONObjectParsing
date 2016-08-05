@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA3636FD1D52ED6200C779DC /* IntParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3636FC1D52ED6200C779DC /* IntParsingTests.swift */; };
 		DA904C091D4BA25B006A66DB /* JSONObjectParsing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA904BFF1D4BA25A006A66DB /* JSONObjectParsing.framework */; };
 		DA904C101D4BA25B006A66DB /* JSONObjectParsing.h in Headers */ = {isa = PBXBuildFile; fileRef = DA904C021D4BA25B006A66DB /* JSONObjectParsing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA904C1A1D4BA28C006A66DB /* ParseOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA904C191D4BA28C006A66DB /* ParseOperator.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA3636FC1D52ED6200C779DC /* IntParsingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntParsingTests.swift; sourceTree = "<group>"; };
 		DA904BFF1D4BA25A006A66DB /* JSONObjectParsing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONObjectParsing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA904C021D4BA25B006A66DB /* JSONObjectParsing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONObjectParsing.h; sourceTree = "<group>"; };
 		DA904C031D4BA25B006A66DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB624DC1D4BD41200E3589A /* StringParsingTests.swift */,
+				DA3636FC1D52ED6200C779DC /* IntParsingTests.swift */,
 				DA904C0F1D4BA25B006A66DB /* Info.plist */,
 			);
 			path = JSONObjectParsingTests;
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3636FD1D52ED6200C779DC /* IntParsingTests.swift in Sources */,
 				DAB624DD1D4BD41200E3589A /* StringParsingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

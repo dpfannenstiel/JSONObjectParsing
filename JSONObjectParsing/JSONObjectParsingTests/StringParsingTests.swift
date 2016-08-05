@@ -11,7 +11,7 @@ import XCTest
 
 class StringParsingTests: XCTestCase {
 	
-	let testJSON:JSON = ["stringKey1":"stringValue1", "doubleKey1":7.0, "nullKey1":NSNull()]
+	let testJSON:JSON = ["stringKey1":"stringValue1", "doubleKey1":7.0, "nullKey1":NSNull(), "intKey1":10]
 	
     override func setUp() {
         super.setUp()
